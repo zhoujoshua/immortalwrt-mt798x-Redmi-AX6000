@@ -15,4 +15,9 @@
 
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+# Passwall feed removed: upstream xiaorouji/openwrt-passwall was deleted
+# (the project was split into luci-app-passwall + openwrt-passwall-packages).
+# Re-enable below if you actually need passwall; OpenClash (loaded via
+# diy-part2.sh) is the proxy app this build relies on.
+#echo 'src-git passwall_luci https://github.com/xiaorouji/luci-app-passwall;main' >>feeds.conf.default
+#echo 'src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages;main' >>feeds.conf.default
