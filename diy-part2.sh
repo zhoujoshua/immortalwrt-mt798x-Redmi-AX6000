@@ -12,3 +12,9 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.1.1/g' package/base-files/files/bin/config_generate
+
+# Add OpenClash (supports Meta/mihomo core, downloaded at runtime via web UI)
+rm -rf package/luci-app-openclash
+git clone --depth=1 https://github.com/vernesong/OpenClash.git /tmp/OpenClash
+mv /tmp/OpenClash/luci-app-openclash package/luci-app-openclash
+rm -rf /tmp/OpenClash
